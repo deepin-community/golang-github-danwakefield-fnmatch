@@ -1,5 +1,48 @@
-template-repository (1.0-1) unstable; urgency=medium
+golang-github-danwakefield-fnmatch (0.0~git20160403.cbb64ac-3) unstable; urgency=medium
 
-  * Initial release
+  [ Debian Janitor ]
+  * Bump debhelper from old 11 to 12.
+    Fixes: lintian: package-uses-old-debhelper-compat-version
+    See-also: https://lintian.debian.org/tags/package-uses-old-debhelper-compat-version.html
+  * Set debhelper-compat version in Build-Depends.
+    Fixes: lintian: uses-debhelper-compat-file
+    See-also: https://lintian.debian.org/tags/uses-debhelper-compat-file.html
+  * Set upstream metadata fields: Bug-Database, Bug-Submit, Repository, Repository-Browse.
+    Fixes: lintian: upstream-metadata-file-is-missing
+    See-also: https://lintian.debian.org/tags/upstream-metadata-file-is-missing.html
+  * Apply multi-arch hints. + golang-github-danwakefield-fnmatch-dev: Add Multi-Arch: foreign.
+    Changes-By: lintian-brush
 
- -- Tsic404 <liuheng@deepin.org>  Sat, 28 Jan 2023 13:46:49 +0800
+  [ Dr. Tobias Quathamer ]
+  * Update gbp.conf for DEP-14
+  * Update d/gitlab-ci.yml
+  * Use --builddirectory=_build in d/rules
+  * Update d/watch to version 4 and use git mode
+  * Update e-mail address of go team
+  * Switch Section to golang from devel
+  * Update to Standards-Version 4.5.1
+  * Use debhelper v13
+  * Add Rules-Requires-Root: no
+
+ -- Dr. Tobias Quathamer <toddy@debian.org>  Fri, 01 Jan 2021 22:17:57 +0100
+
+golang-github-danwakefield-fnmatch (0.0~git20160403.cbb64ac-2) unstable; urgency=medium
+
+  [ Alexandre Viau ]
+  * Point Vcs-* urls to salsa.debian.org.
+
+  [ Anthony Fok ]
+  * Apply "cme fix dpkg" fixes to debian/control,
+    bumping Standards-Version to 4.1.4, etc.
+  * Use debhelper (>= 11)
+  * Expand package description based on comments in fnmatch.go
+  * Add Kevin Ballard (kballard) to debian/copyright
+  * Add myself to the list of Uploaders
+
+ -- Anthony Fok <foka@debian.org>  Sat, 30 Jun 2018 05:40:07 -0600
+
+golang-github-danwakefield-fnmatch (0.0~git20160403.cbb64ac-1) unstable; urgency=medium
+
+  * Initial release (Closes: #879691)
+
+ -- Dr. Tobias Quathamer <toddy@debian.org>  Tue, 24 Oct 2017 17:28:56 +0200
